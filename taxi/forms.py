@@ -16,7 +16,7 @@ class LisenseNumberValidationMixin:
             )
 
         letters = license_number[:3]
-        if not letters.isalpha() and not letters.isupper():
+        if not letters.isalpha() or not letters.isupper():
             raise ValidationError(
                 "Your license number must have 3 "
                 "uppercase letter in the beginning!"

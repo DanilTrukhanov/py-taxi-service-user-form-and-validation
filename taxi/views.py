@@ -124,6 +124,6 @@ def remove_driver_from_car(request: HttpRequest, pk: int) -> HttpResponse:
 def assign_driver_to_car(request: HttpRequest, pk: int) -> HttpResponse:
     car = get_object_or_404(Car, pk=pk)
     user = request.user
-    user.cars.add(car
-                  )
+    user.cars.add(car)
+
     return redirect("taxi:car-detail", pk=pk)

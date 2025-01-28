@@ -15,7 +15,7 @@
 
   </h1>
   <p>Manufacturer: ({{ car.manufacturer.name }}, {{ car.manufacturer.country }})</p>
-  {% if not car.drivers.all %}
+  {% if not car.drivers.exists %}
     <h3>No drivers for now...</h3>
   {% else %}
     <h1>Drivers</h1>
